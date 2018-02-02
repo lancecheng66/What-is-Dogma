@@ -59,7 +59,7 @@ public abstract class Character1 : MonoBehaviour
 
     public abstract IEnumerator TakeDamage();
 
-    public abstract void Respawn();
+    public abstract void Disappear();
 
     public void ChangeDirection()
     {

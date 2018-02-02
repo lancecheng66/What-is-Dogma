@@ -70,7 +70,7 @@ public class Control : Character1
 
             if (transform.position.y <= -14f)
             {
-                Respawn();
+                Disappear();
             }
         }
         HandleInput();
@@ -217,12 +217,9 @@ public class Control : Character1
         }
     }
 
-    public override void Respawn()
+    public override void Disappear()
     {
-        MyRigidbody.velocity = Vector2.zero;
-        MyAnimator.SetTrigger("idle");
-        healthStat.CurrentValue = healthStat.MaxVal;
-        transform.position = currentCheckpoint.transform.position;
+        Destroy(gameObject);
     }
 }
 

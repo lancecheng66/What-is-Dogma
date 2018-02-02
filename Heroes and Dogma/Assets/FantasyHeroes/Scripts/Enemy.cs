@@ -178,10 +178,9 @@ public class Enemy : Character1
         }
     }
 
-    public override void Respawn()
+    public override void Disappear()
     {
 
-        healthStat.CurrentValue = healthStat.MaxVal;
         Destroy(gameObject);
         healthCanvas.enabled = false;
     }
