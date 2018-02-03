@@ -3701,7 +3701,8 @@ MonoBehaviour:
   airControl: 1
   jumpForce: 1000
   immortalTime: 1
-  telepoint: {x: 0, y: 0, z: 0}
+  canThrow: 1
+  skillicon1: {fileID: 1409663171898320, guid: 5de7e8624d5173d4391f3bf944ca724c, type: 2}
 --- !u!1 &126818551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,6 +5259,7 @@ GameObject:
   - component: {fileID: 362378192}
   - component: {fileID: 362378191}
   - component: {fileID: 362378190}
+  - component: {fileID: 362378194}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5344,6 +5346,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &362378194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362378189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65b5130b99cc0b4fbbd7d2aada24c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444185908 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1422012561959226, guid: fef1bf248a58c2441a6873de44f518dc,
@@ -7983,7 +7996,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   airControl: 1
-  jumpForce: 750
+  jumpForce: 800
   immortalTime: 1.5
   ShieldPos: {fileID: 1892479579}
   ShieldPrefab: {fileID: 1377329182643778, guid: fb16c49688a25084398b3b5cdc9d1375,
@@ -8030,7 +8043,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   airControl: 1
-  jumpForce: 750
+  jumpForce: 800
   immortalTime: 1
   AsteroidPos: {fileID: 981372470}
   AsteroidPrefab: {fileID: 1707342571495148, guid: f763638b629eb5147822880754050879,

@@ -6,9 +6,11 @@ using UnityEngine;
 public class Jarred : Control
 {
     GameObject tmp;
-    public Vector3 telepoint;
-
-   
+    
+    private float throwTimer;
+    private float throwCoolDown = 5f;
+    public bool canThrow = false;
+    public GameObject skillicon1;
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
@@ -29,7 +31,10 @@ public class Jarred : Control
 
         if (Input.GetButtonDown("Skill1_P1"))
         {
-            MyAnimator.SetTrigger("throw");
+            
+           
+                MyAnimator.SetTrigger("throw");
+              
         }
         if (Input.GetButtonDown("Skill2_P1"))
         {
@@ -43,6 +48,7 @@ public class Jarred : Control
     }
     public override void FixedUpdate()
     {
+        throwTimer += Time.deltaTime;
         if (!TakingDamage && !IsDead)
         {
             float horizontal = Input.GetAxis("Horizontal_P1"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
@@ -55,20 +61,28 @@ public class Jarred : Control
     public override void ThrowKnife(int value)
     {
         Physics2D.IgnoreLayerCollision(10, 11);
-
-        if (facingRight)
-        {
-            tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<Knife>().Initialize(Vector2.right);
-        }
-        else
-        {
-            tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<Knife>().Initialize(Vector2.left);
-        }
-
+    if (throwTimer >= throwCoolDown)
+    {
+        canThrow = true;
     }
-
+    if (canThrow)
+    {
+            //skillicon1.GetComponent<Renderer>().enabled = true;
+            if (facingRight)
+            {
+                    tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+                    tmp.GetComponent<Knife>().Initialize(Vector2.right);
+            }
+            else
+            {
+                    tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+                    tmp.GetComponent<Knife>().Initialize(Vector2.left);
+            }
+            canThrow = false;
+            //skillicon1.GetComponent<Renderer>().enabled = false;
+            throwTimer = 0;
+        }
+    }
 
 
     public void Skill2()

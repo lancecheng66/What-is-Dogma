@@ -178,6 +178,8 @@ public class Enemy : Character1
         }
     }
 
+
+
     public override void Disappear()
     {
 

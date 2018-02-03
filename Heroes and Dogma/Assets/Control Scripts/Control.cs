@@ -219,6 +219,7 @@ public class Control : Character1
 
     public override void Disappear()
     {
+       //gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }
