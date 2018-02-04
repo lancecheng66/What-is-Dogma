@@ -17,7 +17,10 @@ public class Kayla : Control
     [SerializeField]
     public GameObject boltPrefab;
 
-  
+    private float throwTimer;
+    private float throwCoolDown = 5f;
+    private bool canThrow = false;
+
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
@@ -61,21 +64,32 @@ public class Kayla : Control
             HandleMovement(horizontal);
             Flip(horizontal);
         }
+
+        throwTimer += Time.deltaTime;
     }
 
     public override void ThrowKnife(int value)
     {
-        Physics2D.IgnoreLayerCollision(10, 11);
-        if (facingRight)
+        if (throwTimer >= throwCoolDown)
         {
-            GameObject tmp = (GameObject)Instantiate(AsteroidPrefab, AsteroidPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<Asteroid>().Initialize(Vector2.right); 
+            canThrow = true;
         }
-        else
+        if (canThrow)
         {
-            GameObject tmp = (GameObject)Instantiate(AsteroidPrefab, AsteroidPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<Asteroid>().Initialize(Vector2.left); 
+            Physics2D.IgnoreLayerCollision(10, 11);
+            if (facingRight)
+            {
+                GameObject tmp = (GameObject)Instantiate(AsteroidPrefab, AsteroidPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+                tmp.GetComponent<Asteroid>().Initialize(Vector2.right);
+            }
+            else
+            {
+                GameObject tmp = (GameObject)Instantiate(AsteroidPrefab, AsteroidPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+                tmp.GetComponent<Asteroid>().Initialize(Vector2.left);
 
+            }
+            canThrow = false;
+            throwTimer = 0;
         }
     }
 

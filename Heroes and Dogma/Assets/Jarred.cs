@@ -9,7 +9,7 @@ public class Jarred : Control
     
     private float throwTimer;
     private float throwCoolDown = 5f;
-    public bool canThrow = false;
+    private bool canThrow = false;
     public GameObject skillicon1;
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
@@ -31,10 +31,7 @@ public class Jarred : Control
 
         if (Input.GetButtonDown("Skill1_P1"))
         {
-            
-           
-                MyAnimator.SetTrigger("throw");
-              
+            MyAnimator.SetTrigger("throw");
         }
         if (Input.GetButtonDown("Skill2_P1"))
         {
@@ -67,7 +64,7 @@ public class Jarred : Control
     }
     if (canThrow)
     {
-            //skillicon1.GetComponent<Renderer>().enabled = true;
+            //skillicon1.GetComponent<Renderer>().enabled = true; attempt at making cooldown icon
             if (facingRight)
             {
                     tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
