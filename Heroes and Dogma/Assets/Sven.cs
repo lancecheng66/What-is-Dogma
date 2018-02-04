@@ -46,7 +46,7 @@ public class Sven : Control
 
         if (Input.GetButtonDown("Skill3_P3"))
         {
-            MyAnimator.SetTrigger("slide");
+            MyAnimator.SetTrigger("Shield");
         }
 
     }
@@ -93,6 +93,12 @@ public class Sven : Control
             tmp.GetComponent<Chastise>().Initialize(Vector2.down);
 
         }
+    }
+
+    public void Shield()
+    {
+        TakeDamage();
+        healthStat.CurrentValue += 10;
     }
 }
 

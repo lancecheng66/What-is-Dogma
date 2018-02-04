@@ -26,6 +26,7 @@ public class Control : Character1
 
     private SpriteRenderer spriteRenderer;
 
+    
 
     [SerializeField]
     private float immortalTime;
@@ -217,10 +218,17 @@ public class Control : Character1
         }
     }
 
+    public override IEnumerator heal()
+    {
+            healthStat.CurrentValue += 30;
+            yield return null;
+    }
+
     public override void Disappear()
     {
        //gameObject.SetActive(false);
         Destroy(gameObject);
     }
+    
 }
 

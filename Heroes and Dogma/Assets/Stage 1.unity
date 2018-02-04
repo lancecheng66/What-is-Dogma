@@ -8591,6 +8591,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!1001 &517100850
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415799955048582, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c6ec01329330d7f4e81f0257e1efb927, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &519890012
 GameObject:
   m_ObjectHideFlags: 0
@@ -11380,6 +11422,9 @@ MonoBehaviour:
   damageSources:
   - EnemyProjectile
   - EnemySword
+  healSources: []
+  healeffectPrefab: {fileID: 0}
+  characterPos: {fileID: 0}
   currentCheckpoint: {fileID: 0}
   groundPoints:
   - {fileID: 1967406638}
@@ -16722,6 +16767,9 @@ MonoBehaviour:
   damageSources:
   - PlayerProjectile
   - Sword
+  healSources: []
+  healeffectPrefab: {fileID: 0}
+  characterPos: {fileID: 0}
   meleeRange: 1
   throwRange: 12
   leftEdge: {fileID: 1665731113}
@@ -27668,6 +27716,9 @@ MonoBehaviour:
   damageSources:
   - PlayerProjectile
   - Sword
+  healSources: []
+  healeffectPrefab: {fileID: 0}
+  characterPos: {fileID: 0}
   meleeRange: 1
   throwRange: 12
   leftEdge: {fileID: 1269631851}
@@ -32064,6 +32115,9 @@ MonoBehaviour:
   damageSources:
   - PlayerProjectile
   - Sword
+  healSources: []
+  healeffectPrefab: {fileID: 0}
+  characterPos: {fileID: 0}
   meleeRange: 1
   throwRange: 12
   leftEdge: {fileID: 1665731113}

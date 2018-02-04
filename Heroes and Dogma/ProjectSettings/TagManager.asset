@@ -10,6 +10,7 @@ TagManager:
   - Sword
   - EnemySword
   - Enemy
+  - Playerheal
   layers:
   - Default
   - TransparentFX

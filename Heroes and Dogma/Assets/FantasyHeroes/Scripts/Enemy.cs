@@ -178,7 +178,11 @@ public class Enemy : Character1
         }
     }
 
-
+    public override IEnumerator heal()
+    {
+        healthStat.CurrentValue += 30;
+        yield return null;
+    }
 
     public override void Disappear()
     {

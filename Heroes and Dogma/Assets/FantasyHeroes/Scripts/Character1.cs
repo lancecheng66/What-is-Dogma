@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class Character1 : MonoBehaviour
 {
-  
-    
+
+
     [SerializeField]
     protected Transform knifePos;
 
@@ -26,11 +26,21 @@ public abstract class Character1 : MonoBehaviour
     [SerializeField]
     private List<string> damageSources;
 
+    [SerializeField]
+    private List<string> healSources;
+
+    [SerializeField]
+    public GameObject healeffectPrefab;
+
+    [SerializeField]
+    protected Transform characterPos;
+
+
     public abstract bool IsDead { get; }
 
     public bool Attack { get; set; }
 
-    public bool TakingDamage { get; set;}
+    public bool TakingDamage { get; set; }
 
     public Animator MyAnimator { get; private set; }
 
@@ -41,23 +51,26 @@ public abstract class Character1 : MonoBehaviour
             return swordCollider;
         }
 
-        
+
     }
 
     // Use this for initialization
-    public virtual void Start ()
+    public virtual void Start()
     {
         facingRight = true;
         MyAnimator = GetComponent<Animator>();
         healthStat.Initialize(); //initializes the health bar so that it starts at full life
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public abstract IEnumerator TakeDamage();
+
+    public abstract IEnumerator heal();
 
     public abstract void Disappear();
 
@@ -65,26 +78,26 @@ public abstract class Character1 : MonoBehaviour
     {
         facingRight = !facingRight;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y * 1, 1);
-        
+
     }
 
-    public virtual void ThrowKnife (int value)
+    public virtual void ThrowKnife(int value)
     {
         Physics2D.IgnoreLayerCollision(10, 11);
-        
+
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
             tmp.GetComponent<Knife>().Initialize(Vector2.right);
-        
+
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
             tmp.GetComponent<Knife>().Initialize(Vector2.left);
-        
+
         }
-       
+
     }
 
     public virtual void MeleeAttack()
@@ -99,6 +112,11 @@ public abstract class Character1 : MonoBehaviour
         {
             StartCoroutine(TakeDamage());
         }
+        if (healSources.Contains(other.tag))
+        {
+            StartCoroutine(heal());
+            GameObject tmp = (GameObject)Instantiate(healeffectPrefab, characterPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            tmp.GetComponent<healeffect>().Initialize(Vector2.down);
+        }
     }
-
 }
