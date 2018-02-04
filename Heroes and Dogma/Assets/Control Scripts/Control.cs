@@ -22,7 +22,7 @@ public class Control : Character1
    
     public float jumpForce;
 
-    private bool immortal = false;
+    public bool immortal = false;
 
     private SpriteRenderer spriteRenderer;
 
@@ -117,6 +117,7 @@ public class Control : Character1
             MyRigidbody.velocity = new Vector2(0, MyRigidbody.velocity.y);
         }
 
+        
     }
 
     
@@ -213,7 +214,6 @@ public class Control : Character1
             {
                 MyAnimator.SetLayerWeight(1, 0);
                 MyAnimator.SetTrigger("die");
-                
             }
         }
     }

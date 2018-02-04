@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Sven : Control
 {
-  
+    public bool shield { get; set; }
     [SerializeField]
     protected Transform ShieldPos;
 
@@ -44,22 +44,27 @@ public class Sven : Control
             MyAnimator.SetTrigger("cast");
         }
 
-        if (Input.GetButtonDown("Skill3_P3"))
+        if (Input.GetButton("Skill3_P3"))
         {
-            MyAnimator.SetTrigger("Shield");
+            MyAnimator.SetBool("shield", true);
+           
         }
 
     }
 
     public override void FixedUpdate()
     {
-        if (!TakingDamage && !IsDead)
+        if (!TakingDamage && !IsDead && !shield)
         {
             float horizontal = Input.GetAxis("Horizontal_P3"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
             OnGround = IsGrounded();
             HandleMovement(horizontal);
             Flip(horizontal);
             Physics2D.IgnoreLayerCollision(10, 11);
+            if(shield==false)
+            {
+                immortal = false;
+            }
         }
     }
 
@@ -97,8 +102,11 @@ public class Sven : Control
 
     public void Shield()
     {
-        TakeDamage();
-        healthStat.CurrentValue += 10;
+        if (shield)
+        {
+            immortal = true;
+        }
+       
     }
 }
 
