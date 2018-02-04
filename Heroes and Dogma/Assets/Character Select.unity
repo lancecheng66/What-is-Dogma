@@ -264,7 +264,7 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.63, y: 0}
+  m_Offset: {x: 0.17, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.1551804, y: -0.8254773}
@@ -292,7 +292,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14690299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157, y: 85, z: 0}
+  m_LocalPosition: {x: 109, y: 85, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1408334758}
@@ -2027,11 +2027,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4857010035129676, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 2.6877913
+      value: 14.814814
       objectReference: {fileID: 0}
     - target: {fileID: 4638287210593666, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.6127636
+      value: 13.333333
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2885,7 +2885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1768183185748686, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_IsActive
@@ -3545,6 +3545,14 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.078431375
       objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
   m_IsPrefabParent: 0
@@ -3705,6 +3713,7 @@ MonoBehaviour:
     m_Bits: 1
   airControl: 1
   jumpForce: 1000
+  immortal: 0
   immortalTime: 1
   skillicon1: {fileID: 1409663171898320, guid: 5de7e8624d5173d4391f3bf944ca724c, type: 2}
 --- !u!1 &126818551
@@ -5516,6 +5525,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   airControl: 1
   jumpForce: 750
+  immortal: 0
   immortalTime: 3
 --- !u!95 &539200928
 Animator:
@@ -6344,11 +6354,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4857010035129676, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 2.6562529
+      value: -1.0243006
       objectReference: {fileID: 0}
     - target: {fileID: 4638287210593666, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 7.968752
+      value: -0.095485166
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7198,11 +7208,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1768183185748686, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_IsActive
@@ -8008,6 +8018,7 @@ MonoBehaviour:
     m_Bits: 1
   airControl: 1
   jumpForce: 800
+  immortal: 0
   immortalTime: 1.5
   ShieldPos: {fileID: 1892479579}
   ShieldPrefab: {fileID: 1377329182643778, guid: fb16c49688a25084398b3b5cdc9d1375,
@@ -8059,6 +8070,7 @@ MonoBehaviour:
     m_Bits: 1
   airControl: 1
   jumpForce: 800
+  immortal: 0
   immortalTime: 1
   AsteroidPos: {fileID: 981372470}
   AsteroidPrefab: {fileID: 1707342571495148, guid: f763638b629eb5147822880754050879,
@@ -8138,7 +8150,7 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.63, y: 0}
+  m_Offset: {x: 0.17, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.1551804, y: -0.8254773}
@@ -8166,7 +8178,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444670353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 162.6974, y: 90.72051, z: 0}
+  m_LocalPosition: {x: 135, y: 90.72051, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 115966104}
@@ -8325,6 +8337,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   airControl: 1
   jumpForce: 750
+  immortal: 0
   immortalTime: 1
 --- !u!95 &1562947908
 Animator:

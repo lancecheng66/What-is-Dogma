@@ -144,6 +144,8 @@ public class Enemy : Character1
     }
     public override void ThrowKnife(int value)
     {
+        Physics2D.IgnoreLayerCollision(0, 11);
+        Physics2D.IgnoreLayerCollision(9, 11);
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));

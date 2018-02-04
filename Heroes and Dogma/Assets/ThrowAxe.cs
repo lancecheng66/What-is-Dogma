@@ -10,12 +10,7 @@ public class ThrowAxe : MonoBehaviour
     private Rigidbody2D myRigidbody;
 
     private Vector2 direction;
-
     
-    
-    
-
-
     // Use this for initialization
     void Start()
     {
@@ -26,7 +21,7 @@ public class ThrowAxe : MonoBehaviour
        else
             myRigidbody.AddForce(new Vector2(1, 2) * throwforce, ForceMode2D.Impulse);
 
-        myRigidbody.AddTorque(1 * 1 * -150);
+        myRigidbody.AddTorque(1 * 1 * -35);
     }
 
     void FixedUpdate()
