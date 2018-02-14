@@ -144,7 +144,7 @@ public class Enemy : Character1
     }
     public override void ThrowKnife(int value)
     {
-        Physics2D.IgnoreLayerCollision(0, 11);
+        0
         Physics2D.IgnoreLayerCollision(9, 11);
         if (facingRight)
         {
@@ -155,11 +155,11 @@ public class Enemy : Character1
         {
             GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
             tmp.GetComponent<ThrowAxe>().Initialize(Vector2.left);
-
+            
         }
     }
 
-    public override IEnumerator TakeDamage()
+    public override IEnumerator TakeDamage1()
     {
         if(!healthCanvas.isActiveAndEnabled)
         {
@@ -177,6 +177,48 @@ public class Enemy : Character1
             MyAnimator.SetTrigger("die");
             yield return null;
            
+        }
+    }
+
+    public override IEnumerator TakeDamage2()
+    {
+        if (!healthCanvas.isActiveAndEnabled)
+        {
+            healthCanvas.enabled = true;
+        }
+
+        healthStat.CurrentValue -= 35;
+
+        if (!IsDead)
+        {
+            MyAnimator.SetTrigger("damage");
+        }
+        else
+        {
+            MyAnimator.SetTrigger("die");
+            yield return null;
+
+        }
+    }
+
+    public override IEnumerator TakeDamage3()
+    {
+        if (!healthCanvas.isActiveAndEnabled)
+        {
+            healthCanvas.enabled = true;
+        }
+
+        healthStat.CurrentValue -= 50;
+
+        if (!IsDead)
+        {
+            MyAnimator.SetTrigger("damage");
+        }
+        else
+        {
+            MyAnimator.SetTrigger("die");
+            yield return null;
+
         }
     }
 

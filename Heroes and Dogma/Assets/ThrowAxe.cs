@@ -14,7 +14,7 @@ public class ThrowAxe : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        Physics2D.IgnoreLayerCollision(0, 11);
         myRigidbody = GetComponent<Rigidbody2D>();
        if (transform.localRotation.z>0)
         myRigidbody.AddForce(new Vector2(-1,2)*throwforce, ForceMode2D.Impulse);
@@ -27,7 +27,7 @@ public class ThrowAxe : MonoBehaviour
     void FixedUpdate()
     {
 
-
+        Physics2D.IgnoreLayerCollision(0, 11);
     }
     // Update is called once per frame
     void Update()

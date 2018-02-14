@@ -24,7 +24,13 @@ public abstract class Character1 : MonoBehaviour
     private EdgeCollider2D swordCollider;
 
     [SerializeField]
-    private List<string> damageSources;
+    private List<string> damageSources1;
+
+    [SerializeField]
+    private List<string> damageSources2;
+
+    [SerializeField]
+    private List<string> damageSources3;
 
     [SerializeField]
     private List<string> healSources;
@@ -68,7 +74,9 @@ public abstract class Character1 : MonoBehaviour
 
     }
 
-    public abstract IEnumerator TakeDamage();
+    public abstract IEnumerator TakeDamage1();
+    public abstract IEnumerator TakeDamage2();
+    public abstract IEnumerator TakeDamage3();
 
     public abstract IEnumerator heal();
 
@@ -108,10 +116,21 @@ public abstract class Character1 : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (damageSources.Contains(other.tag))
+        if (damageSources1.Contains(other.tag))
         {
-            StartCoroutine(TakeDamage());
+            StartCoroutine(TakeDamage1());
         }
+
+        if (damageSources2.Contains(other.tag))
+        {
+            StartCoroutine(TakeDamage2());
+        }
+
+        if (damageSources3.Contains(other.tag))
+        {
+            StartCoroutine(TakeDamage3());
+        }
+
         if (healSources.Contains(other.tag))
         {
             StartCoroutine(heal());

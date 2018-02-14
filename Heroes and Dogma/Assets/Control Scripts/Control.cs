@@ -195,7 +195,7 @@ public class Control : Character1
         }
     }
 
-    public override IEnumerator TakeDamage()
+    public override IEnumerator TakeDamage1()
     {
         if (!immortal)
         {
@@ -217,6 +217,53 @@ public class Control : Character1
             }
         }
     }
+
+    public override IEnumerator TakeDamage2()
+    {
+        if (!immortal)
+        {
+            healthStat.CurrentValue -= 35;
+            if (!IsDead)
+            {
+                MyAnimator.SetTrigger("damage");
+                immortal = true;
+                StartCoroutine(IndicateImmortal());
+                yield return new WaitForSeconds(immortalTime);
+                immortal = false;
+
+            }
+
+            else
+            {
+                MyAnimator.SetLayerWeight(1, 0);
+                MyAnimator.SetTrigger("die");
+            }
+        }
+    }
+
+    public override IEnumerator TakeDamage3()
+    {
+        if (!immortal)
+        {
+            healthStat.CurrentValue -= 50;
+            if (!IsDead)
+            {
+                MyAnimator.SetTrigger("damage");
+                immortal = true;
+                StartCoroutine(IndicateImmortal());
+                yield return new WaitForSeconds(immortalTime);
+                immortal = false;
+
+            }
+
+            else
+            {
+                MyAnimator.SetLayerWeight(1, 0);
+                MyAnimator.SetTrigger("die");
+            }
+        }
+    }
+
 
     public override IEnumerator heal()
     {

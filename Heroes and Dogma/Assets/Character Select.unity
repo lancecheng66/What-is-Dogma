@@ -3693,9 +3693,13 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   swordCollider: {fileID: 1444670354}
-  damageSources:
-  - EnemyProjectile
+  damageSources1:
   - EnemySword
+  - EnemyProjectile1
+  damageSources2:
+  - EnemyProjectile2
+  damageSources3:
+  - EnemyProjectile3
   healSources:
   - Playerheal
   healeffectPrefab: {fileID: 1909648597097848, guid: 64e369f3ff5671c4aa624d10df18b2db,
@@ -5508,9 +5512,9 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   swordCollider: {fileID: 1987615828}
-  damageSources:
-  - EnemyProjectile
-  - EnemySword
+  damageSources1: []
+  damageSources2: []
+  damageSources3: []
   healSources: []
   healeffectPrefab: {fileID: 0}
   characterPos: {fileID: 0}
@@ -8000,9 +8004,13 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   swordCollider: {fileID: 14690300}
-  damageSources:
-  - EnemyProjectile
+  damageSources1:
   - EnemySword
+  - EnemyProjectile1
+  damageSources2:
+  - EnemyProjectile2
+  damageSources3:
+  - EnemyProjectile3
   healSources:
   - Playerheal
   healeffectPrefab: {fileID: 0}
@@ -8051,9 +8059,13 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   swordCollider: {fileID: 494654691}
-  damageSources:
-  - EnemyProjectile
+  damageSources1:
   - EnemySword
+  - EnemyProjectile1
+  damageSources2:
+  - EnemyProjectile2
+  damageSources3:
+  - EnemyProjectile3
   healSources:
   - Playerheal
   healeffectPrefab: {fileID: 0}
@@ -8320,9 +8332,13 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   swordCollider: {fileID: 586948607}
-  damageSources:
-  - EnemyProjectile
+  damageSources1:
   - EnemySword
+  - EnemyProjectile1
+  damageSources2:
+  - EnemyProjectile2
+  damageSources3:
+  - EnemyProjectile3
   healSources: []
   healeffectPrefab: {fileID: 0}
   characterPos: {fileID: 0}
