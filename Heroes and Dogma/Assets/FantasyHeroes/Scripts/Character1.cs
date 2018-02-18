@@ -119,6 +119,7 @@ public abstract class Character1 : MonoBehaviour
         if (damageSources1.Contains(other.tag))
         {
             StartCoroutine(TakeDamage1());
+            Debug.Log("hurt");
         }
 
         if (damageSources2.Contains(other.tag))

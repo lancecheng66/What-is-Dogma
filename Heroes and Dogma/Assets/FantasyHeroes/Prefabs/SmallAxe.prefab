@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50035461380944142}
   - component: {fileID: 61338503038614018}
   - component: {fileID: 61426718589772330}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: SmallAxe
   m_TagString: EnemyProjectile1
   m_Icon: {fileID: 0}
