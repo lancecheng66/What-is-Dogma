@@ -53,12 +53,12 @@ public class Enemy : Character1
         }
     }
 
-    [SerializeField]
-    protected Transform ProjectilePos;
+  
+    public Transform ProjectilePos;
 
 
-    [SerializeField]
-    GameObject ProjectilePrefab;
+    
+    public GameObject ProjectilePrefab;
 
     protected Enemy()
     {
