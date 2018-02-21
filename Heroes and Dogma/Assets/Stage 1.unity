@@ -299,7 +299,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalScale.x
@@ -3118,11 +3118,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!4 &98443520 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 315807894}
 --- !u!1 &99373985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,52 +4741,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
     type: 2}
   m_PrefabInternal: {fileID: 938748792}
---- !u!1001 &191383907
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 29.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &200421777
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,52 +5827,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &277988071
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 78.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &282609538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6288,52 +6191,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &315807894
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &321832925
 Prefab:
   m_ObjectHideFlags: 0
@@ -7604,52 +7461,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &368060352
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 40.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &369414901
 GameObject:
   m_ObjectHideFlags: 0
@@ -8577,52 +8388,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &409200836
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 91.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &413098198
 GameObject:
   m_ObjectHideFlags: 0
@@ -11097,6 +10862,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &573995512 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4768256141002168, guid: 743c8ff3403c25848a48107d5269d729,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520421751}
 --- !u!1 &574217264
 GameObject:
   m_ObjectHideFlags: 0
@@ -13205,52 +12975,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!1001 &713666907
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 59.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &720627889
 GameObject:
   m_ObjectHideFlags: 0
@@ -14582,11 +14306,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!4 &794268893 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 277988071}
 --- !u!1 &794341598
 GameObject:
   m_ObjectHideFlags: 0
@@ -14921,6 +14640,7 @@ Transform:
   - {fileID: 62728943}
   - {fileID: 487637334}
   - {fileID: 1665731113}
+  - {fileID: 1520421760}
   m_Father: {fileID: 2008451969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17366,11 +17086,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!4 &977301848 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 191383907}
 --- !u!1 &977649372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17939,11 +17654,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!4 &996875163 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 713666907}
 --- !u!1 &1000254910
 GameObject:
   m_ObjectHideFlags: 0
@@ -19179,52 +18889,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
     type: 2}
   m_PrefabInternal: {fileID: 784097149}
---- !u!1001 &1079969667
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1955777770}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 66.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687214372961970, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_Name
-      value: Orc Peon (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1084954443
 GameObject:
   m_ObjectHideFlags: 0
@@ -21130,7 +20794,7 @@ RectTransform:
   - {fileID: 1016577260}
   - {fileID: 618106624}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24855,15 +24519,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 806368692}
     m_Modifications:
     - target: {fileID: 4201040827256574, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 297.09512
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 4201040827256574, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2493577
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 4201040827256574, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
       propertyPath: m_LocalPosition.z
@@ -24887,9 +24551,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4201040827256574, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114302294240667262, guid: 743c8ff3403c25848a48107d5269d729,
+        type: 2}
+      propertyPath: leftEdge
+      value: 
+      objectReference: {fileID: 1665731113}
+    - target: {fileID: 114302294240667262, guid: 743c8ff3403c25848a48107d5269d729,
+        type: 2}
+      propertyPath: rightEdge
+      value: 
+      objectReference: {fileID: 487637334}
+    m_RemovedComponents:
+    - {fileID: 114302294240667262, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1520421752 stripped
@@ -24908,6 +24583,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8128fcb6a4564844a38fa27a46a6e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knifePos: {fileID: 0}
+  movementSpeed: 2
+  knifePrefab: {fileID: 0}
+  healthStat:
+    bar: {fileID: 1635374258}
+    maxVal: 100
+    currentVal: 100
+  swordCollider: {fileID: 0}
+  damageSources1:
+  - Sword
+  - PlayerProjectile1
+  damageSources2:
+  - PlayerProjectile2
+  damageSources3:
+  - PlayerProjectile3
+  healSources: []
+  healeffectPrefab: {fileID: 0}
+  characterPos: {fileID: 0}
+  meleeRange: 1
+  throwRange: 12
+  leftEdge: {fileID: 1665731113}
+  rightEdge: {fileID: 487637334}
+  ProjectilePos: {fileID: 573995512}
+  ProjectilePrefab: {fileID: 1409663171898320, guid: 5de7e8624d5173d4391f3bf944ca724c,
+    type: 2}
+--- !u!4 &1520421760 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4201040827256574, guid: 743c8ff3403c25848a48107d5269d729,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520421751}
 --- !u!1 &1522965640
 GameObject:
   m_ObjectHideFlags: 0
@@ -26528,7 +26233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628650214
 GameObject:
@@ -26676,6 +26381,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1635374258 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114373981571648058, guid: 743c8ff3403c25848a48107d5269d729,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520421751}
+  m_Script: {fileID: 11500000, guid: 5630941393d7c45468b284bac29879d1, type: 3}
 --- !u!1 &1636263556
 GameObject:
   m_ObjectHideFlags: 0
@@ -28509,7 +28220,7 @@ Transform:
   - {fileID: 670816332}
   - {fileID: 1819777544}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709956446
 GameObject:
@@ -29890,11 +29601,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!4 &1772276252 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 368060352}
 --- !u!1 &1773657873
 GameObject:
   m_ObjectHideFlags: 0
@@ -29968,11 +29674,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!4 &1778798800 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1079969667}
 --- !u!1 &1780142799
 GameObject:
   m_ObjectHideFlags: 0
@@ -30445,6 +30146,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114734253174444746, guid: b4017acc280a297478f9a3d25e396a4f,
+        type: 2}
+      propertyPath: leftEdge
+      value: 
+      objectReference: {fileID: 341620101}
+    - target: {fileID: 114734253174444746, guid: b4017acc280a297478f9a3d25e396a4f,
+        type: 2}
+      propertyPath: rightEdge
+      value: 
+      objectReference: {fileID: 1379272680}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
   m_IsPrefabParent: 0
@@ -31859,11 +31570,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!4 &1904427227 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 409200836}
 --- !u!1 &1906556538
 GameObject:
   m_ObjectHideFlags: 0
@@ -32344,13 +32050,6 @@ Transform:
   - {fileID: 341620101}
   - {fileID: 1379272680}
   - {fileID: 881613493}
-  - {fileID: 977301848}
-  - {fileID: 1772276252}
-  - {fileID: 98443520}
-  - {fileID: 996875163}
-  - {fileID: 794268893}
-  - {fileID: 1904427227}
-  - {fileID: 1778798800}
   m_Father: {fileID: 2008451969}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32892,7 +32591,7 @@ Transform:
   - {fileID: 785635503}
   - {fileID: 1672207685}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015819507
 GameObject:
@@ -33000,63 +32699,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &2025459165
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 21.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776830549216102, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114895730279935312, guid: b4017acc280a297478f9a3d25e396a4f,
-        type: 2}
-      propertyPath: other
-      value: 
-      objectReference: {fileID: 1064488971}
-    - target: {fileID: 114734253174444746, guid: b4017acc280a297478f9a3d25e396a4f,
-        type: 2}
-      propertyPath: leftEdge
-      value: 
-      objectReference: {fileID: 1665731113}
-    - target: {fileID: 114734253174444746, guid: b4017acc280a297478f9a3d25e396a4f,
-        type: 2}
-      propertyPath: rightEdge
-      value: 
-      objectReference: {fileID: 487637334}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b4017acc280a297478f9a3d25e396a4f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2030480575
 GameObject:
   m_ObjectHideFlags: 0
@@ -33348,7 +32990,7 @@ Transform:
   m_Children:
   - {fileID: 33759296}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2043420477
 MonoBehaviour:
