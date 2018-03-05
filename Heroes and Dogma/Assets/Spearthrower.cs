@@ -6,10 +6,8 @@ public class Spearthrower : Character1
 {
     private ISpearThrowerState currentState;
     public GameObject Target { get; set; }
-
     [SerializeField]
     private float meleeRange;
-
     [SerializeField]
     private float throwRange;
 
@@ -54,9 +52,6 @@ public class Spearthrower : Character1
 
 
     public Transform ProjectilePos;
-
-
-
     public GameObject ProjectilePrefab;
 
     protected Spearthrower()
@@ -125,7 +120,7 @@ public class Spearthrower : Character1
                 MyAnimator.SetFloat("Speed", 1);
                 transform.Translate(GetDirection() * movementSpeed * (Time.deltaTime));
             }
-            else if (currentState is PatrolState)
+            else if (currentState is SpearThrowerPatrolState)
             {
                 ChangeDirection();
             }

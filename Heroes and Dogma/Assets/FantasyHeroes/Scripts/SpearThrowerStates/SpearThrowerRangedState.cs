@@ -18,7 +18,11 @@ public class SpearThrowerRangedState : ISpearThrowerState
     public void Execute()
     {
         ThrowKnife();
-       if (spearthrower.Target != null)
+        if (spearthrower.InMeleeRange)
+        {
+            spearthrower.ChangeState(new SpearThrowerMeleeState());
+        }
+        else if (spearthrower.Target != null)
         {
             spearthrower.Move();
         }
