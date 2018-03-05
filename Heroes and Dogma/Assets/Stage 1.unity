@@ -24095,6 +24095,11 @@ Transform:
   m_Father: {fileID: 2008451969}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1494579205 stripped
+EdgeCollider2D:
+  m_PrefabParentObject: {fileID: 68547052092296486, guid: 743c8ff3403c25848a48107d5269d729,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520421751}
 --- !u!1 &1495623976
 GameObject:
   m_ObjectHideFlags: 0
@@ -24608,7 +24613,7 @@ MonoBehaviour:
     bar: {fileID: 1635374258}
     maxVal: 100
     currentVal: 100
-  swordCollider: {fileID: 0}
+  swordCollider: {fileID: 1494579205}
   damageSources1:
   - Sword
   - PlayerProjectile1
@@ -24624,7 +24629,7 @@ MonoBehaviour:
   leftEdge: {fileID: 1665731113}
   rightEdge: {fileID: 487637334}
   ProjectilePos: {fileID: 573995512}
-  ProjectilePrefab: {fileID: 1409663171898320, guid: 5de7e8624d5173d4391f3bf944ca724c,
+  ProjectilePrefab: {fileID: 1176317761448196, guid: b31d3d304b7813040894914c467279ab,
     type: 2}
 --- !u!4 &1520421760 stripped
 Transform:

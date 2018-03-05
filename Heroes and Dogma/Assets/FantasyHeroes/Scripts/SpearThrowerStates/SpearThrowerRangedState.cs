@@ -18,18 +18,9 @@ public class SpearThrowerRangedState : ISpearThrowerState
     public void Execute()
     {
         ThrowKnife();
-        if (spearthrower.InMeleeRange)
-        {
-            spearthrower.ChangeState(new SpearThrowerMeleeState());
-        }
-        else if (spearthrower.Target != null)
-        {
-            spearthrower.Move();
-        }
-        else
-        {
-            spearthrower.ChangeState(new SpearThrowerIdleState());
-        }
+        
+        spearthrower.ChangeState(new SpearThrowerIdleState());
+        
     }
 
     public void Exit()
@@ -52,8 +43,8 @@ public class SpearThrowerRangedState : ISpearThrowerState
         }
         if (canThrow)
         {
-            canThrow = false;
             spearthrower.MyAnimator.SetTrigger("throw");
+            canThrow = false;
         }
     }
 }
