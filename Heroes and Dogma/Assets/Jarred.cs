@@ -8,7 +8,7 @@ public class Jarred : Control
     GameObject tmp;
     
     private float throwTimer;
-    private float throwCoolDown = 5f;
+    private float throwCoolDown = 3f;
     private bool canThrow = false;
     public GameObject skillicon1;
 

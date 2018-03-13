@@ -17,6 +17,10 @@ public class Spearthrower : Character1
     private Transform rightEdge;
     private Canvas healthCanvas;
 
+    private float throwTimer;
+    private float throwCoolDown = 2f;
+    private bool canThrow = true;
+
     public bool InMeleeRange
     {
         get
@@ -91,7 +95,7 @@ public class Spearthrower : Character1
     // Update is called once per frame
     void Update()
     {
-
+        throwTimer += Time.deltaTime;
         if (!IsDead)
         {
             if (!TakingDamage)
@@ -141,18 +145,28 @@ public class Spearthrower : Character1
     {
 
         Physics2D.IgnoreLayerCollision(9, 12);
-
-        if (facingRight)
+        if (throwTimer >= throwCoolDown)
         {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 1)));
-            tmp.GetComponent<Spear>().Initialize(Vector2.right);
+            canThrow = true;
         }
-        else
+        if (canThrow)
         {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -1)));
-            tmp.GetComponent<Spear>().Initialize(Vector2.left);
+            if (facingRight)
+            {
+                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                tmp.GetComponent<Spear>().Initialize(Vector2.right);
+            }
+            else
+            {
+                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 360)));
+                tmp.GetComponent<Spear>().Initialize(Vector2.left);
+
+            }
+            canThrow = false;
+            throwTimer = 0;
 
         }
+        
     }
 
     public override IEnumerator TakeDamage1()
