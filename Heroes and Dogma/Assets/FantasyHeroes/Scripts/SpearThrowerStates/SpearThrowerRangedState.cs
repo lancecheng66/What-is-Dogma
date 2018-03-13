@@ -5,24 +5,24 @@ using UnityEngine;
 public class SpearThrowerRangedState : ISpearThrowerState
 {
     private Spearthrower spearthrower;
-
     private float throwTimer;
-    private float throwCoolDown = 10f;
-    private bool canThrow = true;
+    private float throwCoolDown = 50f;
+    private bool canThrow=true;
 
     public void Enter(Spearthrower spearthrower)
     {
         this.spearthrower = spearthrower;
+        throwTimer += Time.deltaTime;
     }
-
-    public void Execute()
+    
+        public void Execute()
     {
         ThrowKnife();
         
         spearthrower.ChangeState(new SpearThrowerIdleState());
         
     }
-
+   
     public void Exit()
     {
 
@@ -34,17 +34,16 @@ public class SpearThrowerRangedState : ISpearThrowerState
     }
     private void ThrowKnife()
     {
-
-        throwTimer += Time.deltaTime;
         if (throwTimer >= throwCoolDown)
         {
             canThrow = true;
-            throwTimer = 0;
         }
         if (canThrow)
         {
             spearthrower.MyAnimator.SetTrigger("throw");
             canThrow = false;
+            throwTimer = 0;
+           
         }
     }
 }

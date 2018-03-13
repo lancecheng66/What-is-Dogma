@@ -24585,6 +24585,14 @@ Prefab:
       propertyPath: rightEdge
       value: 
       objectReference: {fileID: 487637334}
+    - target: {fileID: 4768256141002168, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768256141002168, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 68
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114302294240667262, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
     - {fileID: 114410742016732314, guid: 743c8ff3403c25848a48107d5269d729, type: 2}
@@ -24629,7 +24637,7 @@ MonoBehaviour:
   leftEdge: {fileID: 1665731113}
   rightEdge: {fileID: 487637334}
   ProjectilePos: {fileID: 573995512}
-  ProjectilePrefab: {fileID: 1176317761448196, guid: b31d3d304b7813040894914c467279ab,
+  ProjectilePrefab: {fileID: 1634371093167566, guid: 8b59c33cd1273c543a33a534523c5b68,
     type: 2}
 --- !u!4 &1520421760 stripped
 Transform:

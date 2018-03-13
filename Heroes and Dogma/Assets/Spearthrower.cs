@@ -91,6 +91,7 @@ public class Spearthrower : Character1
     // Update is called once per frame
     void Update()
     {
+
         if (!IsDead)
         {
             if (!TakingDamage)
@@ -143,13 +144,13 @@ public class Spearthrower : Character1
 
         if (facingRight)
         {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.right);
+            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 1)));
+            tmp.GetComponent<Spear>().Initialize(Vector2.right);
         }
         else
         {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.left);
+            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -1)));
+            tmp.GetComponent<Spear>().Initialize(Vector2.left);
 
         }
     }
