@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolSight : MonoBehaviour
+public class SummonerSight : MonoBehaviour
 {
 
     [SerializeField]
