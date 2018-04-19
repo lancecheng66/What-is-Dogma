@@ -19,10 +19,10 @@ public class WarriorPatrolState : IWarriorState
         Patrol();
 
         warrior.Move();
-        if (warrior.Target != null && warrior.InThrowRange)
+        if (warrior.Target != null && warrior.InMeleeRange)
         {
 
-            warrior.ChangeState(new WarriorRangedState());
+            warrior.ChangeState(new WarriorMeleeState());
         }
     }
 

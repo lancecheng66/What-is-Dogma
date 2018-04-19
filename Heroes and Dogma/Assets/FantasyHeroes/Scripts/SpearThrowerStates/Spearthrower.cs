@@ -153,12 +153,12 @@ public class Spearthrower : Character1
         {
             if (facingRight)
             {
-                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 270)));
                 tmp.GetComponent<Spear>().Initialize(Vector2.right);
             }
             else
             {
-                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 360)));
+                GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -270)));
                 tmp.GetComponent<Spear>().Initialize(Vector2.left);
 
             }

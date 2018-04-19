@@ -147,23 +147,7 @@ public class Warrior : Character1
         base.OnTriggerEnter2D(other);
         currentState.OnTriggerEnter(other);
     }
-    public override void ThrowKnife(int value)
-    {
-
-        Physics2D.IgnoreLayerCollision(9, 12);
-
-        if (facingRight)
-        {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.right);
-        }
-        else
-        {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.left);
-
-        }
-    }
+     
 
     public override IEnumerator TakeDamage1()
     {
