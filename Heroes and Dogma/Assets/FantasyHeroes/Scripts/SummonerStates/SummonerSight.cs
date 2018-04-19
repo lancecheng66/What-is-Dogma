@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpearThrowerSight : MonoBehaviour
+public class PatrolSight : MonoBehaviour
 {
 
     [SerializeField]
-    private Spearthrower spearthrower
-      ;
+    private Summoner summoner;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            spearthrower.Target = other.gameObject;
+            summoner.Target = other.gameObject;
         }
     }
 
@@ -21,7 +20,7 @@ public class SpearThrowerSight : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            spearthrower.Target = null;
+            summoner.Target = null;
         }
     }
 }

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Character1
+public class Warrior : Character1
+
 {
 
-    private IEnemyState currentState;
-    public GameObject Target { get; set;}
+    private IWarriorState currentState;
+    public GameObject Target { get; set; }
 
     [SerializeField]
     private float meleeRange;
@@ -32,14 +33,18 @@ public class Enemy : Character1
         }
     }
 
-         public bool InThrowRange
+    public bool InThrowRange
     {
+        
         get
         {
             if (Target != null)
             {
+                Debug.Log("In throw range");
                 return Vector2.Distance(transform.position, Target.transform.position) <= throwRange;
+               
             }
+            
             return false;
 
         }
@@ -53,14 +58,14 @@ public class Enemy : Character1
         }
     }
 
-  
+
     public Transform ProjectilePos;
 
 
-    
+
     public GameObject ProjectilePrefab;
 
-    protected Enemy()
+    protected Warrior()
     {
     }
 
@@ -70,8 +75,8 @@ public class Enemy : Character1
 
         base.Start();
         //gameObject.GetComponent<Control>().Dead += new DeadEventHandler(RemoveTarget);     //WE DO NOT KNOW WHY WE REMOVED THIS. WE HAVE TO RESEARCH WHAT IT DOES.
-        ChangeState(new IdleState());
-        Physics2D.IgnoreLayerCollision(9,9); //Keeps enemies from colliding with each other
+        ChangeState(new WarriorIdleState());
+        Physics2D.IgnoreLayerCollision(9, 9); //Keeps enemies from colliding with each other
         healthCanvas = transform.GetComponentInChildren<Canvas>();
     }
 
@@ -79,16 +84,16 @@ public class Enemy : Character1
     public void RemoveTarget()
     {
         Target = null;
-        ChangeState(new PatrolState());
+        ChangeState(new WarriorPatrolState());
     }
 
     private void LookAtTarget()
     {
-        if (Target !=null)
+        if (Target != null)
         {
-        float xDir = Target.transform.position.x - transform.position.x;
+            float xDir = Target.transform.position.x - transform.position.x;
 
-            if (xDir <0 && facingRight ||xDir >0 && !facingRight)
+            if (xDir < 0 && facingRight || xDir > 0 && !facingRight)
             {
                 ChangeDirection();
             }
@@ -99,7 +104,7 @@ public class Enemy : Character1
     {
         if (!IsDead)
         {
-            if(!TakingDamage)
+            if (!TakingDamage)
             {
                 currentState.Execute();
             }
@@ -107,7 +112,7 @@ public class Enemy : Character1
             LookAtTarget();
         }
     }
-    public void ChangeState(IEnemyState newState)
+    public void ChangeState(IWarriorState newState)
     {
         if (currentState != null)
         {
@@ -121,12 +126,12 @@ public class Enemy : Character1
     {
         if (!Attack)
         {
-            if ((GetDirection().x > 0 && transform.position.x < rightEdge.position.x)|| (GetDirection().x < 0 && transform.position.x > leftEdge.position.x))
+            if ((GetDirection().x > 0 && transform.position.x < rightEdge.position.x) || (GetDirection().x < 0 && transform.position.x > leftEdge.position.x))
             {
                 MyAnimator.SetFloat("Speed", 1);
                 transform.Translate(GetDirection() * movementSpeed * (Time.deltaTime));
             }
-            else if (currentState is PatrolState)
+            else if (currentState is WarriorPatrolState)
             {
                 ChangeDirection();
             }
@@ -144,9 +149,9 @@ public class Enemy : Character1
     }
     public override void ThrowKnife(int value)
     {
-        
+
         Physics2D.IgnoreLayerCollision(9, 12);
-       
+
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
@@ -156,13 +161,13 @@ public class Enemy : Character1
         {
             GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
             tmp.GetComponent<ThrowAxe>().Initialize(Vector2.left);
-            
+
         }
     }
 
     public override IEnumerator TakeDamage1()
     {
-        if(!healthCanvas.isActiveAndEnabled)
+        if (!healthCanvas.isActiveAndEnabled)
         {
             healthCanvas.enabled = true;
         }
@@ -177,7 +182,7 @@ public class Enemy : Character1
         {
             MyAnimator.SetTrigger("die");
             yield return null;
-           
+
         }
     }
 

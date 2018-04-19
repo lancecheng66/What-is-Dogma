@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpearThrowerIdleState : ISpearThrowerState
+public class SummonerIdleState : ISummonerState
 {
-    private Spearthrower spearthrower;
+    private Summoner summoner;
     private float idleTimer;
     private float idleDuration;
 
-    public void Enter(Spearthrower spearthrower)
+    public void Enter(Summoner summoner)
     {
         idleDuration = UnityEngine.Random.Range(1, 10);
-        this.spearthrower = spearthrower;
+        this.summoner = summoner;
     }
 
     public void Execute()
     {
 
         Idle();
-        if (spearthrower.Target != null)
+        if (summoner.Target != null)
         {
-            //Debug.Log("Player Detected");
-            spearthrower.ChangeState(new SpearThrowerPatrolState());
+            Debug.Log("Player Detected");
+            summoner.ChangeState(new SummonerPatrolState());
         }
     }
 
@@ -34,17 +34,17 @@ public class SpearThrowerIdleState : ISpearThrowerState
     {
         if (other.tag == "PlayerProjectile")
         {
-            spearthrower.Target = GameObject.FindWithTag("Player");
+            summoner.Target = GameObject.FindWithTag("Player");
         }
     }
     private void Idle()
     {
-        spearthrower.MyAnimator.SetFloat("Speed", 0);
+        summoner.MyAnimator.SetFloat("Speed", 0);
         idleTimer += Time.deltaTime;
 
         if (idleTimer >= idleDuration)
         {
-            spearthrower.ChangeState(new SpearThrowerPatrolState());
+            summoner.ChangeState(new SummonerPatrolState());
         }
     }
 }

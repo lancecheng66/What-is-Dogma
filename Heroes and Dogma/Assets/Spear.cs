@@ -15,12 +15,16 @@ public class Spear : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(0, 12);
         myRigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody.AddTorque(1 * 1 * 1);
         if (transform.localRotation.z > 0)
-            myRigidbody.AddForce(new Vector2(1, 0.3f) * throwforce, ForceMode2D.Impulse);
+        
+        myRigidbody.AddForce(new Vector2(1, 0.3f) * throwforce, ForceMode2D.Impulse);
+        
         else
             myRigidbody.AddForce(new Vector2(-1, 0.3f) * throwforce, ForceMode2D.Impulse);
 
         myRigidbody.AddTorque(1 * 1 * 7);
+        
     }
 
     void FixedUpdate()
