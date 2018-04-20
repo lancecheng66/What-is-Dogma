@@ -9,52 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1377329182643778}
+  m_RootGameObject: {fileID: 1524368639927448}
   m_IsPrefabParent: 1
---- !u!1 &1377329182643778
+--- !u!1 &1524368639927448
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4499820418118702}
-  - component: {fileID: 212641808990958818}
-  - component: {fileID: 50006009181106956}
-  - component: {fileID: 61076801029384798}
-  - component: {fileID: 114397197515611480}
+  - component: {fileID: 4981266349494256}
+  - component: {fileID: 212631065046973534}
+  - component: {fileID: 50738975149347890}
+  - component: {fileID: 61030870792590074}
+  - component: {fileID: 114403840288552022}
   m_Layer: 11
-  m_Name: ShieldBoomerang 1
-  m_TagString: PlayerProjectile2
+  m_Name: EBolt
+  m_TagString: EnemyProjectile2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4499820418118702
+--- !u!4 &4981266349494256
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377329182643778}
+  m_GameObject: {fileID: 1524368639927448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.24, y: 2.95, z: 0}
-  m_LocalScale: {x: 0.97080696, y: 0.97080714, z: 0.16180119}
+  m_LocalPosition: {x: 8.48, y: 4.63, z: 0}
+  m_LocalScale: {x: 12, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50006009181106956
+--- !u!50 &50738975149347890
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377329182643778}
+  m_GameObject: {fileID: 1524368639927448}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -63,12 +63,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61076801029384798
+--- !u!61 &61030870792590074
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377329182643778}
+  m_GameObject: {fileID: 1524368639927448}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -79,33 +79,33 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114397197515611480
+--- !u!114 &114403840288552022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377329182643778}
+  m_GameObject: {fileID: 1524368639927448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05607eea306cc6b4cb10599d62331ccb, type: 3}
+  m_Script: {fileID: 11500000, guid: 32c7a1a144887d5479d28750a6d7267f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
---- !u!212 &212641808990958818
+  speed: 5
+--- !u!212 &212631065046973534
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377329182643778}
+  m_GameObject: {fileID: 1524368639927448}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -134,8 +134,8 @@ SpriteRenderer:
   m_SortingLayerID: -2092607415
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e286a03f72024c08ba0222e462a10d37, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fb16cc86978e6464d9ecc8802812674a, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

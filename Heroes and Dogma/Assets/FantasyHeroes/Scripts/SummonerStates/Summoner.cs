@@ -146,13 +146,13 @@ public class Summoner : Character1
 
         if (facingRight)
         {
-            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.right);
+            GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 270)));
+            tmp.GetComponent<EBolt>().Initialize(Vector2.right);
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(ProjectilePrefab, ProjectilePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<ThrowAxe>().Initialize(Vector2.left);
+            tmp.GetComponent<EBolt>().Initialize(Vector2.left);
 
         }
     }

@@ -40,7 +40,6 @@ public class Warrior : Character1
         {
             if (Target != null)
             {
-                Debug.Log("In throw range");
                 return Vector2.Distance(transform.position, Target.transform.position) <= throwRange;
                
             }

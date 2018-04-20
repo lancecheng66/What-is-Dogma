@@ -10,7 +10,7 @@ public class ShieldBoomerang : MonoBehaviour
 
     float boomerangTimer;
     private Rigidbody2D myRigidbody;
-
+    float destroyTime = 1f;
     private Vector2 direction;
 
     
@@ -22,6 +22,7 @@ public class ShieldBoomerang : MonoBehaviour
 
         boomerangTimer = 0.0f;
         playertrans = GameObject.Find("Sven").transform;
+       
     }
 
     void FixedUpdate()
@@ -31,8 +32,8 @@ public class ShieldBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        Destroy(gameObject, destroyTime);
         boomerangTimer += Time.deltaTime;
 
         if (boomerangTimer >= 0.5f)
@@ -61,13 +62,8 @@ public class ShieldBoomerang : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag == "Enemy")
             returning = true;
-
-        if (other.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
 
     }
 }

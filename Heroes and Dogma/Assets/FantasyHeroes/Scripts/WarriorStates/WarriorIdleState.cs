@@ -20,7 +20,7 @@ public class WarriorIdleState : IWarriorState
         Idle();
         if (warrior.Target != null)
         {
-            Debug.Log("Player Detected");
+
             warrior.ChangeState(new WarriorPatrolState());
         }
     }

@@ -1,45 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent (typeof(Rigidbody2D))]
-public class Knife : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class EBolt : MonoBehaviour
 {
-    Vector3 telepoint = new Vector3 (0,0,0);
-
     public float speed;
 
     private Rigidbody2D myRigidbody;
 
     private Vector2 direction;
 
+    float destroyTime = 3f;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-	}
-	
+    }
+
     void FixedUpdate()
     {
         myRigidbody.velocity = direction * speed;
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        Destroy(gameObject, destroyTime);
+
+    }
 
     public void Initialize(Vector2 direction)
     {
         this.direction = direction;
     }
-    void OnBecameInvisible()
-    {
-        
-        Destroy(gameObject);
-    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
-        { Destroy(gameObject); }
+        if (other.gameObject.tag == "Player")
+            Destroy(gameObject);
     }
 }
