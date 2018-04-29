@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class Lance : Control
 {
-    [SerializeField]
-    protected Transform PandaPos;
+    
 
     [SerializeField]
-    public GameObject PandaPrefab;
+    public GameObject BombPrefab;
 
     [SerializeField]
     protected Transform boltPos;
@@ -87,13 +86,13 @@ public class Lance : Control
             Physics2D.IgnoreLayerCollision(10, 11);
             if (facingRight)
             {
-                GameObject tmp = (GameObject)Instantiate(PandaPrefab, PandaPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                tmp.GetComponent<Panda>().Initialize(Vector2.right);
+                GameObject tmp = (GameObject)Instantiate(BombPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 1)));
+                tmp.GetComponent<Bomb>().Initialize(Vector2.right);
             }
             else
             {
-                GameObject tmp = (GameObject)Instantiate(PandaPrefab, PandaPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                tmp.GetComponent<Panda>().Initialize(Vector2.left);
+                GameObject tmp = (GameObject)Instantiate(BombPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -1)));
+                tmp.GetComponent<Bomb>().Initialize(Vector2.left);
 
             }
             canThrow = false;
@@ -108,12 +107,12 @@ public class Lance : Control
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<Bolt>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+            tmp.GetComponent<Bullet>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<Bolt>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+            tmp.GetComponent<Bullet>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
 
         }
 
@@ -132,12 +131,12 @@ public class Lance : Control
             if (facingRight)
             {
                 GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-                tmp.GetComponent<healbolt>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+                tmp.GetComponent<Potion>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
             }
             else
             {
                 GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-                tmp.GetComponent<healbolt>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+                tmp.GetComponent<Potion>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
             }
             canThrow2 = false;
             throwTimer2 = 0;
@@ -146,6 +145,6 @@ public class Lance : Control
 }
 
 
-}
+
 
 
