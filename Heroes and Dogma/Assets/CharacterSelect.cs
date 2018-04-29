@@ -37,6 +37,33 @@ public class CharacterSelect : MonoBehaviour
         characterList[2].SetActive(true);
         DontDestroyOnLoad(transform.gameObject);
     }
+    public void Anastasia()
+    {
+        characterList[3].SetActive(true);
+        DontDestroyOnLoad(transform.gameObject);
+    }
+    public void Lance()
+    {
+        characterList[4].SetActive(true);
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
+    public void Michael()
+    {
+        characterList[5].SetActive(true);
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
+    public void Kim()
+    {
+        characterList[6].SetActive(true);
+        DontDestroyOnLoad(transform.gameObject);
+    }
+    public void Iris()
+    {
+        characterList[7].SetActive(true);
+        DontDestroyOnLoad(transform.gameObject);
+    }
     public void ConfirmButton()
     {
         SceneManager.LoadScene("Stage 1");

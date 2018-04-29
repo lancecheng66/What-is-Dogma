@@ -18,6 +18,13 @@ public class Sven : Control
     [SerializeField]
     public GameObject ChastisePrefab;
 
+    private float throwTimer;
+    private float throwTimer2;
+    private float throwCoolDown = 3f;
+    private float throwCoolDown2 = 10f;
+    private bool canThrow = false;
+    private bool canThrow2 = false;
+
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
         if (Input.GetButtonDown("Jump_P3"))
@@ -54,6 +61,8 @@ public class Sven : Control
 
     public override void FixedUpdate()
     {
+        throwTimer += Time.deltaTime;
+        throwTimer2 += Time.deltaTime;
         if (!TakingDamage && !IsDead && !shield)
         {
             float horizontal = Input.GetAxis("Horizontal_P3"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
@@ -71,32 +80,52 @@ public class Sven : Control
     public override void ThrowKnife(int value)
     {
         Physics2D.IgnoreLayerCollision(10, 11);
-        if (facingRight)
+        if (throwTimer >= throwCoolDown)
+        {
+            canThrow = true;
+        }
+        if (canThrow)
+        {
+            if (facingRight)
             {
                 GameObject tmp = (GameObject)Instantiate(ShieldPrefab, ShieldPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-                tmp.GetComponent<ShieldBoomerang>().Initialize(Vector2.right); 
+                tmp.GetComponent<ShieldBoomerang>().Initialize(Vector2.right);
             }
             else
             {
                 GameObject tmp = (GameObject)Instantiate(ShieldPrefab, ShieldPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-                tmp.GetComponent<ShieldBoomerang>().Initialize(Vector2.left); 
+                tmp.GetComponent<ShieldBoomerang>().Initialize(Vector2.left);
 
             }
+            canThrow = false;
+            //skillicon1.GetComponent<Renderer>().enabled = false;
+            throwTimer = 0;
+        }
     }
+
 
     public void Skill2()
     {
-        Physics2D.IgnoreLayerCollision(10, 11);
+        if (throwTimer2 >= throwCoolDown2)
+        {
+            canThrow2 = true;
+        }
+        if (canThrow2)
+        {
+            Physics2D.IgnoreLayerCollision(10, 11);
         if (facingRight)
         {
-            GameObject tmp = (GameObject)Instantiate(ChastisePrefab, ChastisePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+            GameObject tmp = (GameObject)Instantiate(ChastisePrefab, ChastisePos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             tmp.GetComponent<Chastise>().Initialize(Vector2.down);
         }
         else
         {
-            GameObject tmp = (GameObject)Instantiate(ChastisePrefab, ChastisePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+            GameObject tmp = (GameObject)Instantiate(ChastisePrefab, ChastisePos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             tmp.GetComponent<Chastise>().Initialize(Vector2.down);
-
+        }
+            canThrow2 = false;
+            //skillicon1.GetComponent<Renderer>().enabled = false;
+            throwTimer2 = 0;
         }
     }
 

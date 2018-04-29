@@ -10,7 +10,7 @@ public class Chastise : MonoBehaviour
 
     private Vector2 direction;
 
-    float destroyTime = 1.5f;
+    float destroyTime = 3f;
 
     // Use this for initialization
     void Start()

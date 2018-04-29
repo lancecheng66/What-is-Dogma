@@ -21,8 +21,11 @@ public class Kayla : Control
     public GameObject healboltPrefab;
 
     private float throwTimer;
-    private float throwCoolDown = 5f;
+    private float throwTimer2;
+    private float throwCoolDown = 15f;
+    private float throwCoolDown2 = 3f;
     private bool canThrow = false;
+    private bool canThrow2 = false;
 
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
@@ -60,6 +63,8 @@ public class Kayla : Control
 
     public override void FixedUpdate()
     {
+        throwTimer += Time.deltaTime;
+        throwTimer2 += Time.deltaTime;
         if (!TakingDamage && !IsDead)
         {
             float horizontal = Input.GetAxis("Horizontal_P2"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
@@ -116,20 +121,27 @@ public class Kayla : Control
 
     public void Skill2()
     {
-        Physics2D.IgnoreLayerCollision(10, 11);
-
-        if (facingRight)
+        if (throwTimer2 >= throwCoolDown2)
         {
-            GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<healbolt>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+            canThrow2 = true;
         }
-        else
+        if (canThrow2)
         {
-            GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<healbolt>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+            Physics2D.IgnoreLayerCollision(10, 11);
 
+            if (facingRight)
+            {
+                GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+                tmp.GetComponent<healbolt>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+            }
+            else
+            {
+                GameObject tmp = (GameObject)Instantiate(healboltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+                tmp.GetComponent<healbolt>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+            }
+            canThrow2 = false;
+            throwTimer2 = 0;
         }
-
     }
-}
+    }
 
