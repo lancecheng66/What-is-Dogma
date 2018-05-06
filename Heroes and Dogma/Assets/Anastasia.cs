@@ -31,11 +31,13 @@ public class Anastasia : Control
 
     private float throwTimer;
     private float throwTimer2;
-    private float throwCoolDown = 15f;
-    private float throwCoolDown2 = 3f;
+    private float throwTimer3;
+    private float throwCoolDown = 15;
+    private float throwCoolDown2 = 3;
+    private float throwCoolDown3 = 1;
     private bool canThrow = false;
     private bool canThrow2 = false;
-
+    private bool canThrow3 = false;
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
@@ -74,6 +76,7 @@ public class Anastasia : Control
     {
         throwTimer += Time.deltaTime;
         throwTimer2 += Time.deltaTime;
+        throwTimer3 += Time.deltaTime;
         if (!TakingDamage && !IsDead)
         {
             float horizontal = Input.GetAxis("Horizontal_P2"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
@@ -112,45 +115,52 @@ public class Anastasia : Control
 
     public override void MeleeAttack()
     {
+        if (throwTimer3 >= throwCoolDown3)
+        {
+            canThrow3 = true;
+        }
+        if (canThrow3)
+        {
         Physics2D.IgnoreLayerCollision(10, 11);
 
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(WhipPrefab, WhipPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-            tmp.GetComponent<Whip>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+            tmp.GetComponent<Whip>().Initialize(Vector2.right); 
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(WhipPrefab, WhipPos.position, Quaternion.Euler(new Vector3(0, 0, 180)));
-            tmp.GetComponent<Whip>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
-
+            tmp.GetComponent<Whip>().Initialize(Vector2.left); 
         }
-
+            canThrow3 = false;
+            throwTimer3 = 0;
+        }
     }
 
-    //public void Skill2()
-    //{
-    //    if (throwTimer2 >= throwCoolDown2)
-    //    {
-    //        canThrow2 = true;
-    //    }
-    //    if (canThrow2)
-    //    {
-    //        Physics2D.IgnoreLayerCollision(10, 11);
+    public void Skill2()
+    {
+        if (throwTimer2 >= throwCoolDown2)
+        {
+            canThrow2 = true;
+        }
+        if (canThrow2)
+        {
+            Physics2D.IgnoreLayerCollision(10, 11);
 
-    //        if (facingRight)
-    //        {
-    //            GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-    //            tmp.GetComponent<Rocket>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
-    //        }
-    //        else
-    //        {
-    //            GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-    //            tmp.GetComponent<Rocket>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
-    //        }
-    //        canThrow2 = false;
-    //        throwTimer2 = 0;
-    //    }
-    //}
+            if (facingRight)
+            {
+                GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                tmp.GetComponent<Rocket>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+            }
+            else
+            {
+                GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                tmp.GetComponent<Rocket>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+            }
+            canThrow2 = false;
+            throwTimer2 = 0;
+        }
+    }
 }
 

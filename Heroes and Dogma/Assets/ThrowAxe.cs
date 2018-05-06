@@ -10,7 +10,7 @@ public class ThrowAxe : MonoBehaviour
     private Rigidbody2D myRigidbody;
 
     private Vector2 direction;
-    
+    float destroyTime = 3f;
     // Use this for initialization
     void Start()
     {
@@ -32,7 +32,7 @@ public class ThrowAxe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Destroy(gameObject, destroyTime);
     }
 
     public void Initialize(Vector2 direction)
@@ -44,5 +44,5 @@ public class ThrowAxe : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
+   
 }

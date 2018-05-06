@@ -14,7 +14,7 @@ public class Panda : MonoBehaviour
 
     private Vector2 direction;
 
-    float destroyTime = 4f;
+    float destroyTime = 20f;
 
 
     // Use this for initialization
