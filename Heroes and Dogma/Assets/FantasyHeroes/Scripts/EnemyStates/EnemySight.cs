@@ -9,17 +9,21 @@ public class EnemySight : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Physics2D.IgnoreLayerCollision(11, 10);
         if (other.tag == "Player")
         {
             enemy.Target = other.gameObject;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag== "Player")
+        Physics2D.IgnoreLayerCollision(11, 10);
+        if (other.tag== "Player")
         {
             enemy.Target = null;
         }
+       
     }
 }

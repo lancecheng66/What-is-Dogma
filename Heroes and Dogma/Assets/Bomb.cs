@@ -5,34 +5,43 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    public GameObject Explosion;
     public float throwforce;
-
     private Rigidbody2D myRigidbody;
-
     private Vector2 direction;
-    float destroyTime = 3f;
+    float delay = 3f;
+    float countdown;
     // Use this for initialization
+
     void Start()
     {
-        
+        Physics2D.IgnoreLayerCollision(11, 10);
+        countdown = delay;
         myRigidbody = GetComponent<Rigidbody2D>();
         if (transform.localRotation.z > 0)
-            myRigidbody.AddForce(new Vector2(1, 2) * throwforce, ForceMode2D.Impulse);
+            myRigidbody.AddForce(new Vector2(1, 1.3f) * throwforce, ForceMode2D.Impulse);
         else
-            myRigidbody.AddForce(new Vector2(-1, 2) * throwforce, ForceMode2D.Impulse);
+            myRigidbody.AddForce(new Vector2(-1, 1.3f) * throwforce, ForceMode2D.Impulse);
 
         myRigidbody.AddTorque(1 * 1 * 1);
     }
 
     void FixedUpdate()
     {
-
+        
 
     }
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, destroyTime);
+        countdown -= Time.deltaTime;
+        if (countdown<=0)
+        {
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+            
+        }
+       
     }
 
     public void Initialize(Vector2 direction)
