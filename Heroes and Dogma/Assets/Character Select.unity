@@ -1956,11 +1956,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.52
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.16
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.96181357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.27370548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258503687156934, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -148.23001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
@@ -2002,11 +2022,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -289.77
+      value: -291.87
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.61
+      value: -182.91
       objectReference: {fileID: 0}
     - target: {fileID: 4701540085545158, guid: fef1bf248a58c2441a6873de44f518dc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13110,7 +13130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346279511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a635d59cf4e6c49be83cda74e4b85d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d5ab520b4350d64996a348be72fb1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knifePos: {fileID: 291210327}
@@ -13130,12 +13150,11 @@ MonoBehaviour:
   damageSources3:
   - EnemyProjectile3
   healSources:
-  - Playerheal
+  - 
   healeffectPrefab: {fileID: 1909648597097848, guid: 64e369f3ff5671c4aa624d10df18b2db,
     type: 2}
   characterPos: {fileID: 1346279507}
-  currentCheckpoint: {fileID: 1472603775016522, guid: 0d4b70fa19d5f9d48bc7879875f61c7a,
-    type: 2}
+  currentCheckpoint: {fileID: 0}
   groundPoints:
   - {fileID: 1593745132}
   - {fileID: 1891813535}
@@ -13152,7 +13171,7 @@ MonoBehaviour:
   AsteroidPrefab: {fileID: 1707342571495148, guid: f763638b629eb5147822880754050879,
     type: 2}
   boltPos: {fileID: 533973218}
-  boltPrefab: {fileID: 1978436523307824, guid: 3b8d21121aee9b1478e35d31fe1346bf, type: 2}
+  boltPrefab: {fileID: 1231874434270268, guid: 40c11c996d68211438e93cbde8c2cf48, type: 2}
   healboltPrefab: {fileID: 1603069350089350, guid: fb9154303d6b7d64e88f5b6fe78fe60a,
     type: 2}
 --- !u!95 &1346279516
@@ -15325,7 +15344,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1451633832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 279, y: 58, z: 0}
+  m_LocalPosition: {x: 67, y: 58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1959511601}
@@ -20083,7 +20102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959511605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6304f59af1a76de47a957aac292fa8bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 19133eb4244806240a6a1afd34a5968b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knifePos: {fileID: 812030175}
@@ -20122,10 +20141,10 @@ MonoBehaviour:
   PandaPos: {fileID: 812030175}
   PandaPrefab: {fileID: 1937787518646072, guid: 13bcd42328dfad94989b0165ae3de182,
     type: 2}
-  boltPos: {fileID: 1451633833}
-  boltPrefab: {fileID: 1604565294575256, guid: 6c67064feedd8ce4a8b90c65ac0c8f5e, type: 2}
-  WhipPos: {fileID: 1451633833}
-  WhipPrefab: {fileID: 1604565294575256, guid: 6c67064feedd8ce4a8b90c65ac0c8f5e, type: 2}
+  boltPos: {fileID: 463947996}
+  boltPrefab: {fileID: 1978436523307824, guid: 3b8d21121aee9b1478e35d31fe1346bf, type: 2}
+  WhipPos: {fileID: 463947996}
+  WhipPrefab: {fileID: 1978436523307824, guid: 3b8d21121aee9b1478e35d31fe1346bf, type: 2}
   RocketPos: {fileID: 1600897302}
   RocketPrefab: {fileID: 1766405147563420, guid: b3904d3d0a128ef428cbda8413d539a7,
     type: 2}

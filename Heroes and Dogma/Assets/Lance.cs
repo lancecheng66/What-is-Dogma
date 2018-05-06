@@ -41,7 +41,7 @@ public class Lance : Control
 
         if (Input.GetButtonDown("Attack_P2"))
         {
-            MyAnimator.SetTrigger("attack");
+            MyAnimator.SetTrigger("cast");
         }
 
         if (Input.GetButtonDown("Skill1_P2"))
@@ -50,7 +50,7 @@ public class Lance : Control
         }
         if (Input.GetButtonDown("Skill2_P2"))
         {
-            MyAnimator.SetTrigger("cast");
+            MyAnimator.SetTrigger("attack");
         }
 
         if (Input.GetButtonDown("Skill3_P2"))
@@ -102,24 +102,6 @@ public class Lance : Control
 
     public override void MeleeAttack()
     {
-        Physics2D.IgnoreLayerCollision(10, 11);
-
-        if (facingRight)
-        {
-            GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
-            tmp.GetComponent<Bullet>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
-        }
-        else
-        {
-            GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<Bullet>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
-
-        }
-
-    }
-
-    public void Skill2()
-    {
         if (throwTimer2 >= throwCoolDown2)
         {
             canThrow2 = true;
@@ -141,6 +123,25 @@ public class Lance : Control
             canThrow2 = false;
             throwTimer2 = 0;
         }
+
+    }
+
+    public void Skill2()
+    {
+        Physics2D.IgnoreLayerCollision(10, 11);
+
+        if (facingRight)
+        {
+            GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+            tmp.GetComponent<Bullet>().Initialize(Vector2.right); //change knife to fireball so that you can code different behavior for explosions
+        }
+        else
+        {
+            GameObject tmp = (GameObject)Instantiate(boltPrefab, boltPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+            tmp.GetComponent<Bullet>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
+
+        }
+
     }
 }
 

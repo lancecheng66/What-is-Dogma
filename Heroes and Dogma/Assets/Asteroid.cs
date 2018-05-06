@@ -7,13 +7,12 @@ public class Asteroid : MonoBehaviour
 {
     public float speed;
 
-
+    public GameObject Smoke;
     private Rigidbody2D myRigidbody;
-
     private Vector2 direction;
-
-    float destroyTime = 4f;
-
+    
+    float delay = 4f;
+    float countdown;
 
     // Use this for initialization
     void Start()
@@ -32,13 +31,23 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, destroyTime);
+        countdown -= Time.deltaTime;
+        if (countdown <= 0)
+        {
+            Instantiate(Smoke, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+
+        }
     }
 
     public void Initialize(Vector2 direction)
     {
         this.direction = direction;
     }
-    
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
 }

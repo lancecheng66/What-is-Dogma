@@ -155,7 +155,7 @@ public class Anastasia : Control
             }
             else
             {
-                GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                GameObject tmp = (GameObject)Instantiate(RocketPrefab, RocketPos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
                 tmp.GetComponent<Rocket>().Initialize(Vector2.left); //change knife to fireball so that you can code different behavior for explosions
             }
             canThrow2 = false;

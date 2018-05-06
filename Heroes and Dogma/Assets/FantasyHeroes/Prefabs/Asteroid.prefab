@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  Smoke: {fileID: 1829165534592420, guid: 899a2140809c2e6459874a7019790aa5, type: 2}
 --- !u!198 &198484013797805886
 ParticleSystem:
   m_ObjectHideFlags: 1
