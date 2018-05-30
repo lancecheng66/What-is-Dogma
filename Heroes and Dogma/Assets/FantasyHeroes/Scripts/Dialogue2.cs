@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
-public class Dialogue : MonoBehaviour
+public class Dialogue2 : MonoBehaviour
 {
     private Text _textComponent;
 
@@ -85,7 +85,7 @@ public class Dialogue : MonoBehaviour
     IEnumerator JumpToScene()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Cutscene2");
+        SceneManager.LoadScene("Character Select");
     }
 
     private IEnumerator DisplayString(string stringToDisplay)
@@ -147,10 +147,10 @@ public class Dialogue : MonoBehaviour
     {
         if (_isEndOfDialogue)
         {
-           
+
             StopIcon.SetActive(true);
             return;
- 
+
         }
 
         ContinueIcon.SetActive(true);

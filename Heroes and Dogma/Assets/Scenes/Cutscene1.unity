@@ -728,7 +728,7 @@ MonoBehaviour:
   - "For many decades, this treaty kept the peace but alas, all good things must come
     to an end\u2026"
   SecondsBetweenCharacters: 0.05
-  CharacterRateMultiplier: 0.025
+  CharacterRateMultiplier: 0.0005
   DialogueInput: 13
   ContinueIcon: {fileID: 494429182}
   StopIcon: {fileID: 966618921}
