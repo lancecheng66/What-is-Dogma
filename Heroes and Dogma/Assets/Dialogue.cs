@@ -1,43 +1,91 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using UnityEngine;
 
 [RequireComponent(typeof(Text))]
 public class Dialogue : MonoBehaviour
 {
     private Text _textComponent;
+
     public string[] DialogueStrings;
+
     public float SecondsBetweenCharacters = 0.15f;
-    public float CHaracterRateMultiplier = 0.025f;
+    public float CharacterRateMultiplier = 0.5f;
 
     public KeyCode DialogueInput = KeyCode.Return;
-    private bool _IsStringBeingRevealed = false;
 
-	// Use this for initialization
-	void Start ()
+    private bool _isStringBeingRevealed = false;
+    private bool _isDialoguePlaying = false;
+    private bool _isEndOfDialogue = false;
+
+    public GameObject ContinueIcon;
+    public GameObject StopIcon;
+
+    // Use this for initialization
+    void Start()
     {
         _textComponent = GetComponent<Text>();
         _textComponent.text = "";
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+        HideIcons();
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(!_IsStringBeingRevealed)
+            if (!_isDialoguePlaying)
             {
-                _IsStringBeingRevealed = true;
-                StartCoroutine(DisplayString(DialogueStrings[0]));
+                _isDialoguePlaying = true;
+                StartCoroutine(StartDialogue());
             }
-            
+
         }
-	}
+    }
+
+    private IEnumerator StartDialogue()
+    {
+        int dialogueLength = DialogueStrings.Length;
+        int currentDialogueIndex = 0;
+
+        while (currentDialogueIndex < dialogueLength || !_isStringBeingRevealed)
+        {
+            if (!_isStringBeingRevealed)
+            {
+                _isStringBeingRevealed = true;
+                StartCoroutine(DisplayString(DialogueStrings[currentDialogueIndex++]));
+
+                if (currentDialogueIndex >= dialogueLength)
+                {
+                    _isEndOfDialogue = true;
+                }
+            }
+
+            yield return 0;
+        }
+
+        while (true)
+        {
+            if (Input.GetKeyDown(DialogueInput))
+            {
+                break;
+            }
+
+            yield return 0;
+        }
+
+        HideIcons();
+        _isEndOfDialogue = false;
+        _isDialoguePlaying = false;
+    }
 
     private IEnumerator DisplayString(string stringToDisplay)
     {
         int stringLength = stringToDisplay.Length;
         int currentCharacterIndex = 0;
+
+        HideIcons();
 
         _textComponent.text = "";
 
@@ -50,7 +98,7 @@ public class Dialogue : MonoBehaviour
             {
                 if (Input.GetKey(DialogueInput))
                 {
-                    yield return new WaitForSeconds(SecondsBetweenCharacters * CHaracterRateMultiplier);
+                    yield return new WaitForSeconds(SecondsBetweenCharacters * CharacterRateMultiplier);
                 }
                 else
                 {
@@ -62,16 +110,39 @@ public class Dialogue : MonoBehaviour
                 break;
             }
         }
-            while (true)
+
+        ShowIcon();
+
+        while (true)
+        {
+            if (Input.GetKeyDown(DialogueInput))
             {
-                if(Input.GetKeyDown(DialogueInput))
-                {
-                    break;
-                }
-            yield return 0;
+                break;
             }
-        _IsStringBeingRevealed = false;
+
+            yield return 0;
+        }
+
+        HideIcons();
+
+        _isStringBeingRevealed = false;
         _textComponent.text = "";
     }
 
+    private void HideIcons()
+    {
+        ContinueIcon.SetActive(false);
+        StopIcon.SetActive(false);
+    }
+
+    private void ShowIcon()
+    {
+        if (_isEndOfDialogue)
+        {
+            StopIcon.SetActive(true);
+            return;
+        }
+
+        ContinueIcon.SetActive(true);
+    }
 }
