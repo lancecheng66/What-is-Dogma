@@ -17,6 +17,7 @@ public class Asteroid : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        countdown = delay;
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.AddTorque(1 * 1 * -100);
         //Physics2D.IgnoreLayerCollision(8, 11);

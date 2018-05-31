@@ -727,6 +727,7 @@ MonoBehaviour:
     and the fertile planes to the Humans. '
   - "For many decades, this treaty kept the peace but alas, all good things must come
     to an end\u2026"
+  - '..........................................................'
   SecondsBetweenCharacters: 0.05
   CharacterRateMultiplier: 0.0005
   DialogueInput: 13
