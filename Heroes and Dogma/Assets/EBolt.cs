@@ -16,6 +16,7 @@ public class EBolt : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        //Physics2D.IgnoreLayerCollision(12, 11); //Keeps enemies from colliding with each other
     }
 
     void FixedUpdate()

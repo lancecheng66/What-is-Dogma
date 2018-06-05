@@ -21,7 +21,7 @@ public class Lance : Control
 
     private float throwTimer;
     private float throwTimer2;
-    private float throwCoolDown = 15f;
+    private float throwCoolDown = 50f;
     private float throwCoolDown2 = 3f;
     private bool canThrow = false;
     private bool canThrow2 = false;

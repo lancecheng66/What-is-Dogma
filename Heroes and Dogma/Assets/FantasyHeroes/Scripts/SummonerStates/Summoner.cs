@@ -68,7 +68,7 @@ public class Summoner : Character1
         base.Start();
         //gameObject.GetComponent<Control>().Dead += new DeadEventHandler(RemoveTarget);     //WE DO NOT KNOW WHY WE REMOVED THIS. WE HAVE TO RESEARCH WHAT IT DOES.
         ChangeState(new SummonerIdleState());
-        Physics2D.IgnoreLayerCollision(9, 9); //Keeps enemies from colliding with each other
+        //Physics2D.IgnoreLayerCollision(9, 9); //Keeps enemies from colliding with each other
         healthCanvas = transform.GetComponentInChildren<Canvas>();
     }
 

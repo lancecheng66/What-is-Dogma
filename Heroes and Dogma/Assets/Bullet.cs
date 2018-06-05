@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private Vector2 direction;
 
-    float destroyTime = 0.5f;
+    float destroyTime = 0.25f;
 
     // Use this for initialization
     void Start()

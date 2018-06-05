@@ -2502,8 +2502,8 @@ MonoBehaviour:
   knifePrefab: {fileID: 0}
   healthStat:
     bar: {fileID: 114880179891688216}
-    maxVal: 100
-    currentVal: 100
+    maxVal: 200
+    currentVal: 200
   swordCollider: {fileID: 68069481354347238}
   damageSources1:
   - Sword
