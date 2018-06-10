@@ -3,16 +3,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CutsceneEnd : MonoBehaviour {
+    [SerializeField]
+    private float countdown;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         StartCoroutine(JumpToScene());
 	}
 	
     IEnumerator JumpToScene()
     {
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Character Select");
+        yield return new WaitForSeconds(countdown);
+        SceneManager.LoadScene("Character select 2");
     }
 
 
