@@ -57,6 +57,7 @@ public class Control : Character1
     // Use this for initialization
     public override void Start()
     {
+
         base.Start();   
         startPos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();

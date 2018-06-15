@@ -85,7 +85,7 @@ public class Dialogue4 : MonoBehaviour
     IEnumerator JumpToScene()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Character select 3");
+        SceneManager.LoadScene("Cutscene4-1");
     }
 
     private IEnumerator DisplayString(string stringToDisplay)

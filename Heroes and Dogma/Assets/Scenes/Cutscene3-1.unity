@@ -1112,7 +1112,7 @@ MonoBehaviour:
   Hair: {fileID: 0}
   Eyebrows: {fileID: 21300000, guid: 0927c28dae7c1dd45a606883d6870972, type: 3}
   Eyes: {fileID: 21300000, guid: 148e6beee500a374eb455bd8a59468fe, type: 3}
-  Mouth: {fileID: 21300000, guid: ece2ae2953ed7cc4f902d88d45a3683e, type: 3}
+  Mouth: {fileID: 0}
   Beard: {fileID: 21300000, guid: b5cb202950ae86c4fac195c180de719e, type: 3}
   BodyArmL: {fileID: 21300004, guid: d2a42dcd016dac345ae7c9a038ac265d, type: 3}
   BodyArmR: {fileID: 21300002, guid: d2a42dcd016dac345ae7c9a038ac265d, type: 3}
@@ -2634,7 +2634,7 @@ SpriteRenderer:
   m_SortingLayerID: 2134469583
   m_SortingLayer: 4
   m_SortingOrder: 380
-  m_Sprite: {fileID: 21300000, guid: ece2ae2953ed7cc4f902d88d45a3683e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2642,7 +2642,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &554616600
 GameObject:
