@@ -33,7 +33,7 @@ public class Kim : Control
     private float throwTimer2;
     private float throwTimer3;
     private float throwCoolDown = 15;
-    private float throwCoolDown2 = 3;
+    private float throwCoolDown2 = 40;
     private float throwCoolDown3 = 0;
     private bool canThrow = false;
     private bool canThrow2 = false;
@@ -41,31 +41,31 @@ public class Kim : Control
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
-        if (Input.GetButtonDown("Jump_P2"))
+        if (Input.GetButtonDown("Jump_P3"))
         {
             MyAnimator.SetTrigger("jump");
         }
 
-        if (Input.GetButton("Crouch_P2"))
+        if (Input.GetButton("Crouch_P3"))
         {
             MyAnimator.SetBool("crouch", true);
         }
 
-        if (Input.GetButtonDown("Attack_P2"))
+        if (Input.GetButtonDown("Attack_P3"))
         {
             MyAnimator.SetTrigger("attack");
         }
 
-        if (Input.GetButtonDown("Skill1_P2"))
+        if (Input.GetButtonDown("Skill1_P3"))
         {
             MyAnimator.SetTrigger("throw");
         }
-        if (Input.GetButtonDown("Skill2_P2"))
+        if (Input.GetButtonDown("Skill2_P3"))
         {
             MyAnimator.SetTrigger("cast");
         }
 
-        if (Input.GetButtonDown("Skill3_P2"))
+        if (Input.GetButtonDown("Skill3_P3"))
         {
             MyAnimator.SetTrigger("slide");
         }
@@ -79,7 +79,7 @@ public class Kim : Control
         throwTimer3 += Time.deltaTime;
         if (!TakingDamage && !IsDead)
         {
-            float horizontal = Input.GetAxis("Horizontal_P2"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
+            float horizontal = Input.GetAxis("Horizontal_P3"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
             OnGround = IsGrounded();
             HandleMovement(horizontal);
             Flip(horizontal);

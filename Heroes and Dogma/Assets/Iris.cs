@@ -22,7 +22,7 @@ public class Iris : Control
 
     private float throwTimer;
     private float throwTimer2;
-    private float throwCoolDown = 15f;
+    private float throwCoolDown = 40f;
     private float throwCoolDown2 = 3f;
     private bool canThrow = false;
     private bool canThrow2 = false;
@@ -30,31 +30,31 @@ public class Iris : Control
 
     public override void HandleInput() // where we put in controls (we can use this to make 2-3 player games
     {
-        if (Input.GetButtonDown("Jump_P2"))
+        if (Input.GetButtonDown("Jump_P1"))
         {
             MyAnimator.SetTrigger("jump");
         }
 
-        if (Input.GetButton("Crouch_P2"))
+        if (Input.GetButton("Crouch_P1"))
         {
             MyAnimator.SetBool("crouch", true);
         }
 
-        if (Input.GetButtonDown("Attack_P2"))
+        if (Input.GetButtonDown("Attack_P1"))
         {
             MyAnimator.SetTrigger("attack");
         }
 
-        if (Input.GetButtonDown("Skill1_P2"))
+        if (Input.GetButtonDown("Skill1_P1"))
         {
             MyAnimator.SetTrigger("throw");
         }
-        if (Input.GetButtonDown("Skill2_P2"))
+        if (Input.GetButtonDown("Skill2_P1"))
         {
             MyAnimator.SetTrigger("cast");
         }
 
-        if (Input.GetButtonDown("Skill3_P2"))
+        if (Input.GetButtonDown("Skill3_P1"))
         {
             MyAnimator.SetTrigger("slide");
         }
@@ -67,7 +67,7 @@ public class Iris : Control
         throwTimer2 += Time.deltaTime;
         if (!TakingDamage && !IsDead)
         {
-            float horizontal = Input.GetAxis("Horizontal_P2"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
+            float horizontal = Input.GetAxis("Horizontal_P1"); // "HORIZONTAL" is the name of a unity feature for movement control. You can see it in Edit>Project Settings>Input.
             OnGround = IsGrounded();
             HandleMovement(horizontal);
             Flip(horizontal);

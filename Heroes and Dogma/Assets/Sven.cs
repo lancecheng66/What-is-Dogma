@@ -20,8 +20,8 @@ public class Sven : Control
 
     private float throwTimer;
     private float throwTimer2;
-    private float throwCoolDown = 3f;
-    private float throwCoolDown2 = 10f;
+    private float throwCoolDown = 6f;
+    private float throwCoolDown2 = 20f;
     private bool canThrow = false;
     private bool canThrow2 = false;
 
