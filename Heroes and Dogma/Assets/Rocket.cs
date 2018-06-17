@@ -51,6 +51,11 @@ public class Rocket : MonoBehaviour {
             Instantiate(Explosion, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
+        if (other.gameObject.tag == "Player")
+        {
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
     }
 
     void OnBecameInvisible()

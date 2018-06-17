@@ -195,11 +195,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4577915699478778, guid: 715bbe23ad8b5c042ba37ff9052657fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -293.5
+      value: -316.55
       objectReference: {fileID: 0}
     - target: {fileID: 4577915699478778, guid: 715bbe23ad8b5c042ba37ff9052657fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.87894
+      value: -178.74
       objectReference: {fileID: 0}
     - target: {fileID: 4577915699478778, guid: 715bbe23ad8b5c042ba37ff9052657fb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -224,6 +224,36 @@ Prefab:
     - target: {fileID: 4577915699478778, guid: 715bbe23ad8b5c042ba37ff9052657fb, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564019323909650, guid: 715bbe23ad8b5c042ba37ff9052657fb,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 715bbe23ad8b5c042ba37ff9052657fb, type: 2}
@@ -3266,11 +3296,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4632624091869956, guid: 661c1011432d64741a3f239c6eb926ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -291.87
+      value: -279.56
       objectReference: {fileID: 0}
     - target: {fileID: 4632624091869956, guid: 661c1011432d64741a3f239c6eb926ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.91
+      value: -178.72
       objectReference: {fileID: 0}
     - target: {fileID: 4632624091869956, guid: 661c1011432d64741a3f239c6eb926ef, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3295,6 +3325,36 @@ Prefab:
     - target: {fileID: 4632624091869956, guid: 661c1011432d64741a3f239c6eb926ef, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114060886279642206, guid: 661c1011432d64741a3f239c6eb926ef,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 661c1011432d64741a3f239c6eb926ef, type: 2}
@@ -3344,11 +3404,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4845600667645278, guid: 7f51457e2383b1a4b8ee771bd94445e4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -304.5249
+      value: -288.61
       objectReference: {fileID: 0}
     - target: {fileID: 4845600667645278, guid: 7f51457e2383b1a4b8ee771bd94445e4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.87894
+      value: -183.46
       objectReference: {fileID: 0}
     - target: {fileID: 4845600667645278, guid: 7f51457e2383b1a4b8ee771bd94445e4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3373,6 +3433,36 @@ Prefab:
     - target: {fileID: 4845600667645278, guid: 7f51457e2383b1a4b8ee771bd94445e4, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002534147742142, guid: 7f51457e2383b1a4b8ee771bd94445e4,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f51457e2383b1a4b8ee771bd94445e4, type: 2}
@@ -4392,11 +4482,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4320698041209510, guid: f2a08e2b33c35e74da45e4c1d01cd283, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -302.47
+      value: -290.2
       objectReference: {fileID: 0}
     - target: {fileID: 4320698041209510, guid: f2a08e2b33c35e74da45e4c1d01cd283, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.92
+      value: -183.42
       objectReference: {fileID: 0}
     - target: {fileID: 4320698041209510, guid: f2a08e2b33c35e74da45e4c1d01cd283, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4421,6 +4511,36 @@ Prefab:
     - target: {fileID: 4320698041209510, guid: f2a08e2b33c35e74da45e4c1d01cd283, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448162908828892, guid: f2a08e2b33c35e74da45e4c1d01cd283,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2a08e2b33c35e74da45e4c1d01cd283, type: 2}
@@ -4537,7 +4657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1215250133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 298.87, y: 182.87894, z: 0}
+  m_LocalPosition: {x: 231.2, y: 217.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1262203982}
@@ -4633,11 +4753,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4612895014014634, guid: bc6142150241642458741a3e5c45ef3e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -297.8549
+      value: -314.6
       objectReference: {fileID: 0}
     - target: {fileID: 4612895014014634, guid: bc6142150241642458741a3e5c45ef3e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.87894
+      value: -178.69
       objectReference: {fileID: 0}
     - target: {fileID: 4612895014014634, guid: bc6142150241642458741a3e5c45ef3e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4682,6 +4802,16 @@ Prefab:
         type: 2}
       propertyPath: damageSources3.Array.data[0]
       value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114984758344274294, guid: bc6142150241642458741a3e5c45ef3e,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114984758344274294, guid: bc6142150241642458741a3e5c45ef3e,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc6142150241642458741a3e5c45ef3e, type: 2}
@@ -5041,11 +5171,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4274204254190764, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -299.13
+      value: -309.12
       objectReference: {fileID: 0}
     - target: {fileID: 4274204254190764, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.91
+      value: -183.45
       objectReference: {fileID: 0}
     - target: {fileID: 4274204254190764, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5070,6 +5200,48 @@ Prefab:
     - target: {fileID: 4274204254190764, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330436732870298, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678016781076166, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722809530585714, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522673004929530, guid: 069d9b2a580d29d4194188247437fa35,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 069d9b2a580d29d4194188247437fa35, type: 2}
@@ -5715,7 +5887,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1463460816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.2, y: 41.6, z: -10}
+  m_LocalPosition: {x: -66.2, y: 41.6, z: -34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435992924}
@@ -6143,11 +6315,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4533606869197754, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -300.51
+      value: -306.11
       objectReference: {fileID: 0}
     - target: {fileID: 4533606869197754, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.91
+      value: -183.53
       objectReference: {fileID: 0}
     - target: {fileID: 4533606869197754, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6172,6 +6344,40 @@ Prefab:
     - target: {fileID: 4533606869197754, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: damageSources1.Array.data[1]
+      value: PlayerProjectile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066998604724114, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 381
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552238882615856, guid: 594029088e429fc4b8ac7ae80b0e3d1c,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 594029088e429fc4b8ac7ae80b0e3d1c, type: 2}
@@ -6870,11 +7076,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4783565522320714, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -295.7
+      value: -308.01
       objectReference: {fileID: 0}
     - target: {fileID: 4783565522320714, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -182.81
+      value: -183.51
       objectReference: {fileID: 0}
     - target: {fileID: 4783565522320714, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6899,6 +7105,44 @@ Prefab:
     - target: {fileID: 4783565522320714, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286971710101222, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: damageSources1.Array.data[0]
+      value: PlayerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286971710101222, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: damageSources2.Array.data[0]
+      value: PlayerProjectile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286971710101222, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: damageSources3.Array.data[0]
+      value: PlayerProjectile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 68033471072723406, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225889975479122, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
+      propertyPath: m_Name
+      value: Sven2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682301848417592, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 151
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286971710101222, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: healthStat.maxVal
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286971710101222, guid: 4e82ee0feb51c37448dd00f5a020e5a9,
+        type: 2}
+      propertyPath: healthStat.currentVal
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e82ee0feb51c37448dd00f5a020e5a9, type: 2}

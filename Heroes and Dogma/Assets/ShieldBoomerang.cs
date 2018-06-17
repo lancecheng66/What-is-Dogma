@@ -21,7 +21,7 @@ public class ShieldBoomerang : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
 
         boomerangTimer = 0.0f;
-        playertrans = GameObject.Find("Sven").transform;
+        playertrans = GameObject.Find("ShieldPos").transform;
        
     }
 
