@@ -8937,6 +8937,7 @@ GameObject:
   - component: {fileID: 1850865270}
   - component: {fileID: 1850865274}
   - component: {fileID: 1850865271}
+  - component: {fileID: 1850865272}
   m_Layer: 0
   m_Name: Platform1-4 (1)
   m_TagString: Untagged
@@ -8982,6 +8983,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1850865272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850865269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaf3c435e3cd484e9969755a0856ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: 9
 --- !u!61 &1850865274
 BoxCollider2D:
   m_ObjectHideFlags: 0
