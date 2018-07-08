@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class CharacterSelect3 : MonoBehaviour
 {
     
-
     private GameObject[] characterList;
 
     private void Start()
@@ -19,7 +18,14 @@ public class CharacterSelect3 : MonoBehaviour
         foreach (GameObject go in characterList)
             go.SetActive(false);
     }
-
+    private void Update()
+    {
+        //GameObject ListOfPlayers = GameObject.FindGameObjectsWithTag("Player");
+        //if (ListOfPlayers.length == 0)
+        //{
+        //    SceneManager.LoadScene("GameOver");
+        //}
+    }
 
     public void Kayla()
     {
